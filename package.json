@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "name": "@59naga/libwebp",
+  "version": "0.0.0",
+  "main": "dist/libwebp.js",
+  "description": "tweaks libwebp-0.6.0.js+dumex.js(WebPDecoder/WebPRiffParser) to UMD",
+  "scripts": {
+    "test": "node --experimental-modules test/index.mjs",
+    "format": "prettier test/index.mjs libwebp.mjs --write",
+    "build": "babel libwebp.mjs --out-dir dist --plugins=@babel/transform-modules-umd",
+    "postversion": "git push --follow-tags"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/plugin-transform-modules-umd": "^7.0.0-beta.54",
+    "prettier": "^1.13.7"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
